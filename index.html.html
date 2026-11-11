@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>日本版HBR判定 (JCS 2020 FU)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* Layout & Colors */
+:root{
+  --bg:#f2f5f9; --surface:#ffffff; --fg:#16202d; --muted:#5a6678; --line:#d8dee8;
+  --accent:#1c5da6; --accent-soft:#e2edf9; --on-accent:#ffffff;
+  --major:#b3261e; --major-soft:#fbe8e6; --on-major:#ffffff;
+  --minor:#8f5300; --minor-soft:#fcefd7;
+  --ok:#1a6b43; --ok-soft:#e0f2e8;
+  --header:#ffffff;
+  --font:"Noto Sans JP", sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.65;margin:0;padding:0;}
+.gutter{max-width:720px;margin:0 auto;padding:0 16px;}
+.bar{position:sticky;top:0;z-index:20;background:var(--header);border-bottom:1px solid var(--line);padding:10px 0;}
+.bar .gutter{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 16px;}
+h1{margin:0;font-size:17px;font-weight:700}
+.sub{margin:0;font-size:12px;color:var(--muted)}
+.status{display:flex;align-items:center;gap:10px}
+.pill{padding:4px 14px;border-radius:999px;font-weight:700;font-size:14px;background:var(--line);color:var(--muted)}
+[data-state="hbr"] .pill{background:var(--major);color:var(--on-major)}
+[data-state="near"] .pill{background:var(--minor-soft);color:var(--minor)}
+[data-state="ok"] .pill{background:var(--ok-soft);color:var(--ok)}
+.counts{font-size:13px;color:var(--muted)}
+.counts b{color:var(--fg);font-size:16px}
+.hint{flex-basis:100%;margin:0;font-size:12px;color:var(--muted)}
+main{display:flex;flex-direction:column;gap:16px;padding:16px 0 40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.ghead{display:flex;align-items:baseline;gap:10px;padding
